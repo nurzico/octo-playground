@@ -34,4 +34,17 @@ jobs:
           echo version: ${{ github.sha }}
 
       - name: Write version to file
-        run: echo "${{ github.sha }}" > version.txt
+        run: echo ${{ github.sha }} > version.txt
+        shell: bash
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add commit_hash.txt
+          git commit -m "Add version"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
