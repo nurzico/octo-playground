@@ -31,8 +31,7 @@ jobs:
       - name: Getting Version
         run: |
           echo PR merged, incrementing version number
-          echo version: ${{ github.event.pull_request.head.ref }}
+          echo version: ${{ github.sha }}
 
       - name: Write version to file
-        run: |
-          echo ${{ github.event.pull_request.head.ref }} > version.txt
+        run: echo "${{ github.sha }}"" > version.txt
