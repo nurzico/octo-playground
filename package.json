@@ -1,0 +1,14 @@
+{
+  "name": "octo-playground",
+  "version": "1.0.0",
+  "description": "[![CI](https://github.com/nurzico/octo-playground/actions/workflows/blank.yml/badge.svg?branch=main)](https://github.com/nurzico/octo-playground/actions/workflows/blank.yml)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nur",
+  "license": "ISC"
+}
