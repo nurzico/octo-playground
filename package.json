@@ -20,7 +20,7 @@
     "tagFormat": "${version}",
     "branches": [
       {
-        "name": "master"
+        "name": "main"
       }
     ],
     "plugins": [
